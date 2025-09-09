@@ -4,6 +4,12 @@ def factorial(n):
     else:
         return n*factorial(n-1)
 
+def suma_n(n):
+    if n==0 or n==1:
+        return n
+    else:
+        return n+suma_n(n-1)
+
 while True:
     print("\n- MENU DE RECURSIVIDAD -")
     print("1- Factorial de n")
@@ -18,13 +24,14 @@ while True:
 
     match option_user:
         case "1":
-            print()
+            print("\nFactorial de numero n")
             n = int(input("Ingresa un numero: "))
             print(f"El factorial de {n}, es: {factorial(n)}")
 
         case "2":
             print("\nSuma de numeros n")
-
+            n = int(input("Ingresa un numero: "))
+            print(f"El suma de numeros n = {suma_n(n)}")
         case "3":
             print("\nFibonacci de n")
 
