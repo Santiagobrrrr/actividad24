@@ -18,6 +18,11 @@ def fibonacci(n):
             return 1
         else:
             return fibonacci(n - 1) + fibonacci(n - 2)
+def potencia(n,e):
+    if e == 0:
+        return 1
+    else:
+        return n*potencia(n,e-1)
 
 while True:
     print("\n- MENU DE RECURSIVIDAD -")
@@ -47,7 +52,6 @@ while True:
             n = int(input("Ingresa un numero: "))
             print(f"El término {n} de Fibonacci es: {fibonacci(n)}")
 
-
         case "4":
             print("\nRepeticion de letra")
 
@@ -56,6 +60,9 @@ while True:
 
         case "6":
             print("\nPotencia")
+            n = int(input("Ingresa un numero: "))
+            e = int(input("Ingresa el exponente: "))
+            print(f"El resultado de {n}^{e} es: {potencia(n,e)}")
 
         case "7":
             print("\nSaliendo del programa")
