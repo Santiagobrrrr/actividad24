@@ -1,2 +1,2 @@
-# actividad24
+# ACTIVIDAD 24
 Actividad 24 - Recursividad
