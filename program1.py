@@ -28,6 +28,12 @@ def contar_letra(palabra, letra, i=0):
         else:
             return contar_letra(palabra, letra, i+1)
 
+def invertir_cadena(cadena, i=0):
+    if i == len(cadena):
+        return ""
+    else:
+        return invertir_cadena(cadena, i+1) + cadena[i]
+
 def potencia(n,e):
     if e == 0:
         return 1
@@ -66,10 +72,12 @@ while True:
             print("\nRepeticion de letra")
             palabra = input("Ingrese la palabra que desea:").lower()
             letra = input("Ingrese la letra que desea buscar en la palabra: ").lower()
-            print(f"La letra '{letra}' aparece {contar_letra(palabra, letra)} veces")
+            print(f"La letra '{letra}' aparece {contar_letra(palabra, letra, 0)} veces")
 
         case "5":
             print("\nInvertir cadena de texto")
+            cadena = input("Ingresa una cadena: ")
+            print(invertir_cadena(cadena, 0))
 
         case "6":
             print("\nPotencia")
