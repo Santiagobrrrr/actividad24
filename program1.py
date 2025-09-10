@@ -18,6 +18,16 @@ def fibonacci(n):
             return 1
         else:
             return fibonacci(n - 1) + fibonacci(n - 2)
+
+def contar_letra(palabra, letra, i=0):
+    if i == len(palabra) or letra == "":
+        return 0
+    else:
+        if palabra[i] == letra:
+            return 1 + contar_letra(palabra, letra, i+1)
+        else:
+            return contar_letra(palabra, letra, i+1)
+
 def potencia(n,e):
     if e == 0:
         return 1
@@ -54,6 +64,9 @@ while True:
 
         case "4":
             print("\nRepeticion de letra")
+            palabra = input("Ingrese la palabra que desea:").lower()
+            letra = input("Ingrese la letra que desea buscar en la palabra: ").lower()
+            print(f"La letra '{letra}' aparece {contar_letra(palabra, letra)} veces")
 
         case "5":
             print("\nInvertir cadena de texto")
