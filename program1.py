@@ -1,14 +1,23 @@
 def factorial(n):
-    if n==0 or n==1:
+    if n == 0 or n == 1:
         return 1
     else:
         return n*factorial(n-1)
 
 def suma_n(n):
-    if n==0 or n==1:
+    if n == 0 or n == 1:
         return n
     else:
         return n+suma_n(n-1)
+
+def fibonacci(n):
+    if n == 0:
+        return 0
+    else:
+        if n == 1:
+            return 1
+        else:
+            return fibonacci(n - 1) + fibonacci(n - 2)
 
 while True:
     print("\n- MENU DE RECURSIVIDAD -")
@@ -32,8 +41,12 @@ while True:
             print("\nSuma de numeros n")
             n = int(input("Ingresa un numero: "))
             print(f"El suma de numeros n = {suma_n(n)}")
+
         case "3":
             print("\nFibonacci de n")
+            n = int(input("Ingresa un numero: "))
+            print(f"El término {n} de Fibonacci es: {fibonacci(n)}")
+
 
         case "4":
             print("\nRepeticion de letra")
